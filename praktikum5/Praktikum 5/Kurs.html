@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Currency Converter
+        </title>
+     
+    </head>
+    <body>
+        <h2>Converter</h2>
+        <div class="kursgroup">
+            <select onchange="Currency(); Calculate()"  id="converter" class="control">
+            <option disabled selected value="select">Select Currency</option>
+            <option value="DOLLAR">DOLLAR</option>
+            <option value="DOLLAR">DOLLARS</option>
+            <option value="RINGGIT">RINGGIT</option>
+            <option value="YEN">YEN</option>
+            <option value="EUR">EUR</option>
+            <option value="RIYAL">RIYAL</option>
+            </select>
+            <br>
+            <input oninput="Calculate()" type="number" id="value1"  placeholder="Enter amount" class="input" >
+            
+        </div>
+        <br>
+        <input type='number' id='value2' disabled='disabled'> 
+            <label>Rupiah</label>
+        <script>
+            ///function Dollar(){
+    ///let input = document.getElementById('amount').value;
+    ///let kurs_result = amount*9.915
+    ///document.getElementById('result').innerHTML = kurs_result;
+    //}
+    function Currency(){
+y = document.getElementById("converter").value;
+return y;
+}
+
+function Calculate(){
+y = Currency();
+
+x = document.getElementById("value1").value;
+
+if(x == ""){
+document.getElementById("value2").value = "";
+}else{
+switch(y){
+case "DOLLAR":
+document.getElementById("value2").value = x * 9.915;
+break;
+
+case "DOLLARS":
+document.getElementById("value2").value = x * 13.472;
+break;
+
+case "YEN":
+document.getElementById("value2").value = x * 120;
+break;
+
+case "RINGGIT":
+document.getElementById("value2").value = x * 874;
+break;
+
+case "EUR":
+document.getElementById("value2").value = x * 15.888;
+
+case 'RIYAL':
+document.getElementById("value2").value = x * 3.592;
+break;
+}
+}
+}
+ 
+        </script>
+    </body>
+</html>

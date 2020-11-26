@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <center>
+        <label style="font-size: large; font-style: initial;" >Crew Mugiwara no luffy</label>
+        <br>
+        <br>
+        <select id='listpic'Onchange='pick()'>
+            <option value="pic\Luffy.jpeg">Luffy</option>
+            <option value="pic\Zoro.jpeg">Zorro</option>
+            <option value="pic\Sanji.jpeg">Sanji</option>
+            <option value="pic\Nami.jpeg">Nami</option>
+            <option value="pic\Usop.jpeg">Usop</option>
+            <option value="pic\Chopper.png">Chopper</option>
+            <option value="pic\Robin.jpeg">Robin</option>
+            <option value="pic\Franky.png">Franky</option>
+            <option value="pic\Brook.png">Brook</option>
+            <option value="pic\Jinbe.jpeg">Jinbe</option>
+            <br>
+
+        </select>
+        <img scr="pic\Onepiece.jpeg" style="width: 100%" id="pic">
+
+    <script>	
+              function pick() {
+         let picture = document.getElementById("listpic").value;
+             document.getElementById("pic").src=picture;
+             alert(picture);0
+     }
+       </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="pesan"></p>
+    <input type="text" id="pesan_masuk" style="width: 70%;">
+    <input type="button" id="btn_kirim" value="Kirim" onclick="chat()" style="width: 26%;">
+
+    <script>
+        function chat(){
+            document.getElementById('pesan').innerHTML += document.getElementById("pesan_masuk").value +  "<br>";
+        }
+    </script>
+</body>
+</html>

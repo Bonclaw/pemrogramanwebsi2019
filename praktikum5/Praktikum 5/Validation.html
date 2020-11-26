@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Tour</title>
+</head>
+<body>
+    <h1>Validation Tour</h1>
+    <div>
+        <form>
+    Name
+    <input id="name" type="text" required>
+    <br><br>
+    Email 
+    <input id="email" type="email" required>
+    <br><br>
+    Depature time 
+    <input id="depature" type="time" required>
+    <br><br>
+    Destinaton 
+    <input id="destination" type="text" required>
+    <br><br>
+    Ticket 
+    <input id="ticket" type="number" required>
+    <br>
+    <button onclick="validate()" type="button">Submit</button>
+    <h4 id='custumername'></h4>
+    <h4 id='custumeremail'></h4>
+    <h4 id='custumerdepature'></h4>
+    <h4 id='custumerdestination'></h4>
+    <h4 id='custumerticket'></h4>
+        </form>
+   
+    
+<script>
+    function validate(){
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var depature = document.getElementById('depature').value;
+        var destination = document.getElementById('destination').value;
+        var ticket = document.getElementById('ticket').value;
+
+        if (name == "" || name.length > 30){
+            alert('name cannot be empty')
+            
+        }else if(email == ""){
+            alert('Email cannot be empty')
+            
+        }else if(depature == ""){
+            alert('Depature cannot be empty')
+            
+        }else if(destination == ""){
+            alert('Destination cannot be empty')
+
+        }else if (ticket == "" && isNaN() || ticket < 1 || ticket > 10){
+            alert('Tikcet cannot be empty')
+        }
+        else{
+            document.getElementById('custumername').innerHTML=' Name :'+name+'<br>';
+            document.getElementById('custumeremail').innerHTML=' Email :'+email+'<br>';
+            document.getElementById('custumerdepature').innerHTML=' Depature :'+depature+'<br>';
+            document.getElementById('custumerdestination').innerHTML=' Destination :'+destination+'<br>';
+            document.getElementById('custumerticket').innerHTML=' Ticket :'+ticket+'<br>';
+        }
+    }
+</script>
+</body>
+</html>
